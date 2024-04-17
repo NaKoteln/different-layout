@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Формы</title>
+</head>
+
+<body>
+    <h2>Поля и кнопки</h2>
+    <form method="post" autocomplete="off" action="index.html">
+        <input type="text" name="Идентификация поля ввода" autocomplete="on" value="Установленное значение поля ввода"
+            dir="rtl" />
+        <input type="password" name="password" autofocus />
+        <p>
+            <button type="submit">Кнопка для отправки данных</button>
+            <button type="reset">Кнопка для сброса</button>
+        </p>
+        <p>
+            <input type="submit" value="Отправить (др. способ)" />
+            <input type="reset" value="Сбросить (др. способ)" />
+        </p>
+    </form>
+
+    <h2>Дополнительные виды полей</h2>
+    <form>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" readonly />
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Surname" disabled />
+        </p>
+        <p>
+            <input type="text" name="phone" placeholder="8-9xx-xxx-xx-xx" size="20" maxlength="15" required />
+        </p>
+    </form>
+
+    <h2>Форма с набором значений</h2>
+    <form>
+        <input list="List" type="text" name="nameList" placeholder="Выбор значений" />
+    </form>
+    <datalist id="List">
+        <option value="option 1">var 1</option>
+        <option value="option 2" label="var 2"></option>
+        <option value="option 3"></option>
+    </datalist>
+
+    <h2>Поле поиска</h2>
+    <form>
+        <input type="search" name="search" />
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Числовое поле</h2>
+    <form>
+        <p>
+            <label for="number">Числовое поле: </label>
+            <input type="number" list="numberList" id="number" name="number" step="10" min="0" max="250" />
+        </p>
+    </form>
+    <datalist id="numberList">
+        <option value="100"></option>
+        <option value="200"></option>
+        <option value="250"></option>
+    </datalist>
+
+    <h2>Форма-ползунок</h2>
+    <form>
+        <label for="scale">Ползунок: </label>
+        0<input type="range" id="scale" name="scale" step="2" min="0" max="50" value="20" />50
+    </form>
+
+    <h2>Флажки</h2>
+    <form>
+        <p>
+            <input type="checkbox" name="var1"> var 1
+        </p>
+        <p>
+            <input type="checkbox" checked name="var2"> var 2
+        </p>
+        <p>
+            <input type="checkbox" name="var3"> var 3
+        </p>
+    </form>
+
+    <h2>Переключатели</h2>
+    <form>
+        <p>
+            <input type="radio" value="var1" checked name="group1">var 1
+        </p>
+        <p>
+            <input type="radio" value="var2" name="group1">var 2
+        </p>
+    </form>
+
+    <h2>Выбор цвета</h2>
+    <label for="color">Выбор цвета: </label>
+    <input type="color" list="colors" id="color" name="color" />
+    <datalist id="colors">
+        <option value="#008B8B"></option>
+        <option value="#FF69B4"></option>
+        <option value="#FFFF00"></option>
+    </datalist>
+
+    <h2>Особые поля и вложенные элементы</h2>
+    <form method="get">
+        <fieldset>
+            <legend>Поля для данных:</legend>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" id="email" placeholder="user@mail.ru" name="email" />
+            </p>
+            <p>
+                <label for="url">URL: </label>
+                <input type="url" required id="url" name="url" />
+            </p>
+            <p>
+                <label for="tel">Phone: </label>
+                <input type="tel" id="tel" placeholder="(XXX)-XXX-XX-XX" name="tel"
+                    pattern="\+\d-\d{3}-\d{3}-\d{2}-\d{2}" />
+            </p>
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </fieldset>
+    </form>
+
+    <h2>Поля для времени</h2>
+    <form>
+        <p>
+            <label for="week">Неделя: </label>
+            <input type="week" id="week" name="week">
+        </p>
+        <p>
+            <label for="localdate">Дата и время: </label>
+            <input type="datetime-local" id="localdate" name="date">
+        </p>
+        <p>
+            <label for="month">Месяц: </label>
+            <input type="month" id="month" name="month">
+        </p>
+        <p>
+            <label for="time">время: </label>
+            <input type="time" id="time" name="time">
+        </p>
+    </form>
+
+    <h2>Выбор файлов</h2>
+    <form method="post" enctype="multipart/form-data" action="index.html">
+        <p>
+            <input type="file" name="file" multiple>
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+
+    <h2>Список элементов</h2>
+    <form>
+        <label for="select">Список: </label>
+
+        <select multiple name="select" id="select">
+            <optgroup label="Group 1">
+                <option disabled selected>Выберите 1 вариант</option>
+                <option value="var 1">var 1</option>
+                <option value="var 2" selected>var 2</option>
+                <option value="var 3">var 3</option>
+            </optgroup>
+            <optgroup label="Group 2">
+                <option disabled selected>Выберите 2 варианта</option>
+                <option value="var 1">var 1</option>
+                <option value="var 2">var 2</option>
+                <option value="var 3" selected>var 3</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <h2>Многострочное текстовое поле</h2>
+    <form>
+        <p>
+            <label for="text">Введите текст:</label>
+            <textarea name="text" id="text" cols="30" rows="5" placeholder="Ввести текст"></textarea>
+        </p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@import "utils.css";
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../../fonts/Roboto.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+    color: white;
+}
+
+/* Main */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../../images/mount.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*cover масштабирует изображение, сохраняя пропорции изображения. Картинка может обрезаться*/
+}
+
+.header {
+    padding: 32px 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs>div.tab {
+    background-color: rgb(45, 42, 42);
+    opacity: 0.8;
+    width: 10%;
+    padding: 16px 32px;
+    text-align: center;
+    border-bottom: 5px solid;
+}
+
+.tabs>div:nth-child(1) {
+    border-color:  aqua;
+}
+
+.tabs>div:nth-child(2) {
+    border-color: orange;
+}
+
+
+.values>div:nth-child(-n+2) {
+    width: 10%;
+}
+
+.values>div:nth-child(1) {
+    font-size: 0.7em;
+}
+
+.values>div:nth-child(2) {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.values>div:nth-child(n+3) {
+    flex: 1;
+    border-left: 1px solid rgb(65, 64, 64);
+}
+
+.values {
+    backdrop-filter: blur(3px);
+}
+
+.value {
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgb(45, 42, 42);
+    opacity: 0.8;
+
+    padding: 32px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.info > span {
+    padding: 3px;
+    font-size: 0.5em;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" value="width=device-width, initial-scale=1.0" />
+    <title>Task3</title>
+
+    <style>
+        .wrapper {
+            width: 400px;
+            height: 300px;
+            gap: 3px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+                "r y"
+                "b y";
+                
+            /* grid-template: 
+                "r y" 1fr
+                "b y" 1fr
+                / 1fr 1fr; */
+        }
+        .red {
+            grid-area: r;
+            background-color: red;
+        }
+        .blue {
+            grid-area: b;
+            background-color: blue;
+        }
+        .yellow {
+            grid-area: y;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="yellow"></div>
+    </div>
+</body>

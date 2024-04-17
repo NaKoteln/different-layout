@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: "Roboto";
+    color: white;
+}
+
+/* Main */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    flex-wrap: wrap;
+}
+
+.box-1 {
+    display: flex;
+    /* flex: 1; */
+    flex: 1 1 15%;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+.box-2 {
+    display: flex;
+    /* flex: 3; */
+    flex: 3 1 50%;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+.box-3 {
+    display: flex;
+    /* width: 66.7%; */
+    /* flex: 2; */
+    flex: 2 1 66.7%;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+.box-4 {
+    display: flex;
+    /* flex: 1; */
+    flex: 1 1 33.3%;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+.box-5 {
+    display: flex;
+    /* flex: 1; */
+    flex: 1 1 33%;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+.cell { 
+    /* flex: 1; */
+    /* flex: 1 1 33.3%; */
+    flex: 1 1 300px;
+
+    background-color: aqua;
+    margin: 4px;
+
+    flex-wrap: wrap;
+}
+
+.horizontal-cell {
+    /* flex: 2; */
+    /* flex: 2 1 66.7%; */
+    flex: 2 1 600px;
+
+    background-color: rgb(144, 225, 225);
+    margin: 4px;
+
+    flex-wrap: wrap;
+}
+
+.vertical-cell {
+    /* height: 65.6%; */
+    /* flex: 2; */
+    /* flex: 2 1 66.7%; */
+    flex: 2 1 600px;
+
+    background-color: rgb(212, 174, 247);
+    margin: 4px;
+
+    flex-wrap: wrap;
+}
+
+.square-cell {
+    /* height: 65.6%; */
+    /* flex: 2; */
+    /* flex: 2 1 66.7%; */
+    flex: 2 1 600px;
+
+    background-color: bisque;
+    margin: 4px;
+
+    flex-wrap: wrap;
+}

@@ -1,0 +1,42 @@
+.gap-2 {
+    gap: 2px;
+}
+
+.width-100 {
+    /* object-fit: cover; */
+    width: 100%;
+}
+
+/* Main */
+
+body {
+    margin: 0;
+}
+
+/* Значение по умолчанию при расширении > 1400px */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: row;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

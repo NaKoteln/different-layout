@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок документа</title>
+</head>
+
+<body>
+    <h1>Заголовок 1 уровня</h1>
+    <h2>Заголовок 2 уровня</h2>
+    <h3>Заголовок 3 уровня</h3>
+    <h4>Заголовок 4 уровня</h4>
+    <h5>Заголовок 5 уровня</h5>
+    <h6>Заголовок 6 уровня</h6>
+
+    <p>Параграф</p>
+    <p>Перенос текста<br />при помощи br</p>
+
+    <pre>
+        Вывод предварительно
+        Отформатированного
+        Текста
+    </pre>
+
+    <div>Стилизация <span style="color: blueviolet;">определённого</span> участка текста</div>
+    <div>Это <b>жирный</b>, <del>зачёркнутый</del>, <i>курсивный</i>, <small>меньший</small>, <u>подчёркнутый</u>,
+        <mark>выделенный</mark> текст<br>Это <sub>подстрочный</sub> и <sup>надстрочный</sup> текст
+    </div>
+
+    <figure>
+        <figcaption>Заголовок для изображения</figcaption>
+        <img src="http://127.0.0.1:5500/html/banan.png" alt="Текстовое описание изображения" width="384" height="240">
+    </figure>
+
+    <h2>Нумерованный список с римскими цифрами. Начало нумерации с 10</h2>
+    <ol style="list-style-type:upper-roman;" start="10">
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+        <li>Третий пункт</li>
+    </ol>
+
+    <h2>Ненумерованный список с изменённым маркером</h2>
+    <ul style="list-style-type:circle;">
+        <li>Первый пункт</li>
+        <li>Второй пункт</li>
+        <li>Третий пункт</li>
+    </ul>
+
+    <details>
+        <summary>Заголовок раскрываемого блока</summary>
+        <p>Содержание раскрываемого блока</p>
+    </details>
+
+    <h2>Список определений</h2>
+    <dl>
+        <dt>Термин 1</dt>
+        <dd>Определение 1</dd>
+        <dt>Термин 2</dt>
+        <dd>Определение 2</dd>
+    </dl>
+
+    <h2>Таблица</h2>
+    <table>
+        <caption>Заголовок таблицы</caption>
+        <thead>
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Элемент 1.1</td>
+                <td>Элемент 2.1</td>
+                <td>Элемент 3.1</td>
+            </tr>
+            <tr>
+                <td>Элемент 1.2</td>
+                <td>Элемент 2.2</td>
+                <td>Элемент 3.2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Вспомогательная информация по всей длине таблицы</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <a href="link.html"><br>Ссылка для перехода на страницу</a>
+
+    <h2>Навигация внутри документа</h2>
+    <a href="#block1">Блок 1</a> | <a href="#block2" target="_blank">Блок 2 в новом окне/вкладке</a> |
+    <a href="#block3" target="_top" style="text-decoration:none">Блок 3</a>
+    <p id="block1">Блок 1</p>
+    <p id="block2">Блок 2</p>
+    <p id="block3">Блок 3</p>
+
+    <!-- <iframe src="http://127.0.0.1:5500/html/index.html" frameborder="0" width="500" height="500"></iframe> -->
+
+    <div>
+        <div>1</div>
+        <div>2</div>
+    </div>
+    <div>
+        <span>1</span>
+        <span>2</span>
+    </div>
+
+</body>
+
+</html>

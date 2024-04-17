@@ -1,0 +1,44 @@
+.logo-photo {
+    height: 70px;
+    min-height: 70px;
+    width: 70px;
+    min-width: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-ellipsis {
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    text-overflow: ellipsis; /* Многоточие */
+}
+
+.item-photo {
+    height: 30px;
+    width: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.user-photo {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.menu {
+    min-width: 250px;
+}
+
+.min-w-50 {
+    min-width: 50%;
+}

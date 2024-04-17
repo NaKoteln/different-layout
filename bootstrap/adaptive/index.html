@@ -1,0 +1,235 @@
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap adaptive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar - навигационный заголовок -->
+    <header class="navbar bg-light p-3">
+        <!-- navbar-brand используется для названия компании/продукта -->
+        <div class="navbar-brand col-md-3 col-lg-2 logo-photo"
+            style="background-image: url(../photo/dachshund.png);"></div>
+
+        <!-- d-md-none - элементы не отображаются на мониторах, у которых ширина > md -->
+        <div class="d-flex d-md-none gap-3">
+            <!-- nav-item - отдельный элемент навигационной панели -->
+            <div class="nav-item">
+                <!-- nav-link - ссылка 
+                data-bs-toggle=collapse - скрывает содержимое кнопки
+                data-bs-target - id элемента, который будет скрыт/показан
+                aria-expanded=false - элемент по умолчанию скрыт -->
+                <button class="nav-link item-photo" type="button" data-bs-target="#navbarSearch" data-bs-toggle="collapse"
+                    aria-expanded="false" style="background-image: url(../photo/search.png);">
+                </button>
+            </div>
+            <!-- offcanvas - элемент боковой панели -->
+            <div class="nav-item">
+                <button class="nav-link item-photo" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarMenu" aria-expanded="false" style="background-image: url(../photo/menu.png);">
+                </button>
+            </div>
+        </div>
+        <!-- navbar-search - функция поиска на навигационной панели
+        collapse => элемент изначально не показан -->
+        <div id="navbarSearch" class="navbar-search w-100 collapse p-2">
+            <input class="form-control w-100" type="text" placeholder="Найти клиента">
+        </div>
+    </header>
+
+    <div class="row overflow-hidden">
+        <div class="menu col-lg-2 overflow-hidden">
+            <!-- Для экранов md и меньше это будет изначально скрытая боковая панель
+            offcanvas-end - помещает её в правую часть экрана -->
+            <div class="offcanvas-md offcanvas-end bg-light" id="sidebarMenu">
+                <!-- offcanvas-header включает поддержку заголовка с кнопкой закрытия -->
+                <div class="offcanvas-header">
+                    <!-- Ссылка на заголовок -->
+                    <div class="offcanvas-title logo-photo col-lg-2" id="sidebarMenuLabel"
+                        style="background-image: url(../photo/dachshund.png);"></div>
+                    <!-- Кнопка закрытия, с помощью dismiss -->
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"></button>
+                </div>
+
+                <!-- Основное содержательное "тело" боковой панели -->
+                <div class="offcanvas-body flex-column h-100 gap-2 p-3 d-flex">
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/me.png" alt="Profile" />
+                        <span class="text-ellipsis">Мой профиль</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/users-avatar.png" alt="Profile" />
+                        <span class="text-ellipsis">Клиенты</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/test.png" alt="Tests">
+                        <span class="text-ellipsis">Тесты</span>
+                    </div>
+                    <div class="flex-fill"></div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/user-space.png" alt="User">
+                        <span class="text-ellipsis">Режим клиента</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/admin-space.png" alt="Admin">
+                        <span class="text-ellipsis">Режим админа</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/color-palette.png" alt="Color-palette">
+                        <span class="text-ellipsis">UI Kit</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center flex-nowrap">
+                        <img width="30" src="../photo/user.png" alt="Me">
+                        <span class="text-ellipsis">Иван Иванов</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col mh-100 overflow-auto bg-white d-flex flex-column gap-3 p-3">
+            <div>
+                КЛИЕНТЫ
+            </div>
+            <!-- Данный элемент будет отображаться на экранах ширины >= lg -->
+            <div class="d-none d-lg-block">
+                <form class="d-flex bg-light gap-3 p-3">
+                    <input type="search" class="form-control flex-fill" placeholder="Найти клиента">
+                    <button type="submit" class="btn btn-primary text-nowrap">
+                        <span>Пригласить клиента</span>
+                    </button>
+                </form>
+            </div>
+            <div class="d-flex flex-column gap-3">
+
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+                <div class="bg-light d-flex gap-3 p-3">
+                    <div class="user-photo"
+                        style="background-image: url('https://avatars.mds.yandex.net/get-kino-vod-films-gallery/28788/47e2fd514411e18b76af786d7417062d/380x240')">
+                    </div>
+                    <div class="flex-fill">
+                        <div class="fw-bold">User_name</div>
+                        <div>text text text</div>
+                        <button class="btn btn-link btn-sm p-0">Редактировать</button>
+                    </div>
+                    <div class="d-flex align-items-start justify-content-end flex-wrap gap-3" style="max-width: 30%">
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Подробно о клиенте</button>
+                        <button class="btn btn-primary text-nowrap text-ellipsis">Добавить консультацию</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

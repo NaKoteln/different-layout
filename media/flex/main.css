@@ -1,0 +1,51 @@
+/* Свойства width и height включают в себя значения padding и border, но не margin*/
+.border-box {
+    box-sizing: border-box;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.p-2 {
+    padding: 2px;
+}
+
+/* Main */
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Значение по умолчанию при расширении > 1400px */
+.column {
+    flex: 20%;
+    max-width: 20%;
+}
+
+@media screen and (max-width: 576px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+    .column {
+        flex: 25%;
+        max-width: 25%;
+    }
+}

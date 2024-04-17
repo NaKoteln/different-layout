@@ -1,0 +1,30 @@
+/* Utils */
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.chip {
+    font-size: 0.7em;
+    /* align-self: center;
+    justify-self: center; */
+    padding: 0.5rem;
+    border-radius: 999px;
+    background-color: rgba(70, 138, 221, 0.441); 
+}
+
+.menu-item:hover {
+    border-radius: 999px;
+    background-color: rgba(158, 187, 222, 0.441); 
+    /* align-self: center;
+    justify-self: center; */
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* .percent {
+    align-self: center;
+    justify-self: center;
+} */
